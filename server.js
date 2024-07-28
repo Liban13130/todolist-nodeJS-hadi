@@ -21,11 +21,12 @@ app.post('/submit', (req, res) => {
 })
 
 app.post('/input', (req, res) => {
-  name.forEach(el => {
-    const index = el
-  })
+  let position;
+  for (let index = 0; index < name.length; index++) {
+    position = name[index];
+  }
+  console.log(position);
 
-  name.splice(index)
   res.status(201).redirect('/')
 })
 
