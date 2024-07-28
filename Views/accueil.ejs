@@ -14,9 +14,20 @@
                 <input type="text" class="text" name="todo">
             </label>
             <input type="submit" value="Enregistrer" class="button">
+            
         </form>
     </div>
-    
+    <div class="block">
+        <% name.forEach(function(el) { %>
+            <div class="content">
+                <p style="margin: 0;"> <%= el %> </p>
+                <form action="/input" method="post">
+                    <input name="form2" type="submit" value="Supprimer" class="button is-danger">
+                </form>
+            </div>
+            
+            <% }) %>
+    </div>
 
 </body>
 </html>
